@@ -1,4 +1,4 @@
-# Survival Game
+# Zambumba
 
 ## Descrição
 Survival Game é um jogo 2D desenvolvido na Godot Engine, onde o jogador enfrenta ondas de inimigos enquanto coleta power-ups e tenta alcançar a maior pontuação possível.
@@ -71,8 +71,13 @@ Existem dois tipos de inimigos no jogo, cada um com características distintas:
 ## Requisitos
 - Godot Engine 4.x
 
-## Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+## Agradecimentos
+###Trabalho desenvolvido para a UC Usabilidade, Desenvolvimento Web, Mobile e Jogos lecionada pelo professor Montanha, pelos Alunos :
+###Juan Moraes Lopes RA: 12523219000
+###Luiz Henrique Fernandes do Carmo Ra: 323118606
+###Gabriel Gaia do Amaral RA: 822229852
+###Bruno Almeida Vilela RA: 323124929
+
 
 ## Licença
 Este projeto está sob a licença MIT.
