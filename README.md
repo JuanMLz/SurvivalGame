@@ -72,11 +72,11 @@ Existem dois tipos de inimigos no jogo, cada um com características distintas:
 - Godot Engine 4.x
 
 ## Agradecimentos
-### Trabalho desenvolvido para a UC Usabilidade, Desenvolvimento Web, Mobile e Jogos lecionada pelo professor Montanha, pelos Alunos :
-### Juan Moraes Lopes RA: 12523219000
-### Luiz Henrique Fernandes do Carmo Ra: 323118606
-### Gabriel Gaia do Amaral RA: 822229852
-### Bruno Almeida Vilela RA: 323124929
+# Trabalho desenvolvido para a UC Usabilidade, Desenvolvimento Web, Mobile e Jogos lecionada pelo professor Montanha, pelos Alunos :
+# Juan Moraes Lopes RA: 12523219000
+# Luiz Henrique Fernandes do Carmo Ra: 323118606
+# Gabriel Gaia do Amaral RA: 822229852
+# Bruno Almeida Vilela RA: 323124929
 
 
 ## Licença
