@@ -65,18 +65,19 @@ Existem dois tipos de inimigos no jogo, cada um com características distintas:
 - Use o **mouse** para direcionar o personagem e o tiro.
 - Clique com o **botão esquerdo do mouse** para disparar balas nos inimigos.
 - Colete os power-ups:
-  - **Losango Verde**: Aumenta a quantidade de tiros disparados temporariamente.
-  - **Losango Rosa**: Aumenta o dano de cada tiro por alguns segundos.
+  - **Speed**: Aumenta a quantidade de tiros disparados temporariamente.
+  - **strength**: Aumenta o dano de cada tiro por alguns segundos.
 
 ## Requisitos
 - Godot Engine 4.x
 
 ## Agradecimentos
- Trabalho desenvolvido para a UC Usabilidade, Desenvolvimento Web, Mobile e Jogos lecionada pelo professor Montanha, pelos Alunos :
- Juan Moraes Lopes RA: 12523219000
- Luiz Henrique Fernandes do Carmo Ra: 323118606
- Gabriel Gaia do Amaral RA: 822229852
- Bruno Almeida Vilela RA: 323124929
+Este trabalho foi desenvolvido para a disciplina de **Usabilidade, Desenvolvimento Web, Mobile e Jogos**, lecionada pelo professor Montanha. A equipe de desenvolvimento foi composta por:
+
+- Juan Moraes Lopes – RA: 12523219000
+- Luiz Henrique Fernandes do Carmo – RA: 323118606
+- Gabriel Gaia do Amaral – RA: 822229852
+- Bruno Almeida Vilela – RA: 323124929
 
 
 ## Licença
