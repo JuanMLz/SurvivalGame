@@ -1,4 +1,4 @@
-# Zambumba
+# Zabumba
 
 ## Descrição
 Survival Game é um jogo 2D desenvolvido na Godot Engine, onde o jogador enfrenta ondas de inimigos enquanto coleta power-ups e tenta alcançar a maior pontuação possível.
