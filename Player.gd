@@ -11,12 +11,15 @@ var reload_speed = 0.1
 var default_reload_speed = reload_speed
 var power_up_reset = []
 
+# Inicializa o jogador e configura sua posição global
 func _ready():
 	Global.player = self
-	
+
+# Reseta a posição global ao sair da árvore de cena
 func _exit_tree():
 	Global.player = null
-	
+
+# Processa a movimentação e o disparo do jogador
 func _process(delta):
 	# Movimentação do jogador
 	velocity.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
@@ -37,6 +40,7 @@ func _process(delta):
 		$Reload_speed.start()
 		can_shoot = false
 
+# Trata a colisão do jogador com inimigos
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemy"):
 		is_dead = true
@@ -44,12 +48,12 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		await(get_tree().create_timer(1).timeout)
 		get_tree().reload_current_scene()
 
-
+# Recarrega o tiro do jogador
 func _on_reload_speed_timeout() -> void:
 	can_shoot = true
 	$Reload_speed.wait_time = reload_speed
 
-
+# Reseta os efeitos de power-up
 func _on_power_up_cooldown_timeout() -> void:
 	if power_up_reset.find("Power_up_reload") != null:
 		reload_speed = default_reload_speed
