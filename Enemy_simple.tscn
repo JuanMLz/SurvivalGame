@@ -1,15 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://hddhmdybtc04"]
+[gd_scene load_steps=8 format=3 uid="uid://hddhmdybtc04"]
 
-[ext_resource type="Texture2D" uid="uid://byucg4s3sigx6" path="res://assets/Square.png" id="1_mb8xg"]
+[ext_resource type="Texture2D" uid="uid://bxlehqanyktfu" path="res://assets/zombii4.png" id="1_6du8l"]
 [ext_resource type="Script" path="res://Enemy_simple.gd" id="2_f3dut"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rev3n"]
-size = Vector2(144.118, 258.824)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4yn5"]
+atlas = ExtResource("1_6du8l")
+region = Rect2(0, 0, 283, 503)
 
-[node name="Enemy_base" type="Sprite2D"]
-modulate = Color(0.757805, 0.181252, 0, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_abrpc"]
+atlas = ExtResource("1_6du8l")
+region = Rect2(283, 0, 283, 503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqk32"]
+atlas = ExtResource("1_6du8l")
+region = Rect2(566, 0, 283, 503)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3c1xh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4yn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abrpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqk32")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rev3n"]
+size = Vector2(139.706, 285.368)
+
+[node name="Enemy_base" type="AnimatedSprite2D"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_mb8xg")
+sprite_frames = SubResource("SpriteFrames_3c1xh")
+frame_progress = 0.248234
 script = ExtResource("2_f3dut")
 
 [node name="HitBox" type="Area2D" parent="." groups=["Enemy"]]

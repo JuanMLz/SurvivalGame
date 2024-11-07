@@ -22,13 +22,13 @@ script = ExtResource("1_kwk16")
 enemies = Array[PackedScene]([ExtResource("2_533e6"), ExtResource("3_1o1lx")])
 power_ups = Array[PackedScene]([ExtResource("4_b5th8"), ExtResource("5_h8h6p")])
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_x1puq")
+
 [node name="Background" parent="." instance=ExtResource("11_y1u55")]
 
 [node name="Player" parent="." instance=ExtResource("2_rx8il")]
 position = Vector2(320, 180)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_x1puq")
 
 [node name="Enemy_spawn_timer" type="Timer" parent="."]
 wait_time = 3.0

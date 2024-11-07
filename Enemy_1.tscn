@@ -1,13 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmx8p1tkc4vc8"]
+[gd_scene load_steps=7 format=3 uid="uid://cmx8p1tkc4vc8"]
 
 [ext_resource type="PackedScene" uid="uid://hddhmdybtc04" path="res://Enemy_simple.tscn" id="1_l6v5n"]
-[ext_resource type="Texture2D" uid="uid://cd675dmk7k5qo" path="res://assets/zombi.png" id="2_bb8yr"]
+[ext_resource type="Texture2D" uid="uid://bxlehqanyktfu" path="res://assets/zombii4.png" id="2_34mjw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xok3t"]
+atlas = ExtResource("2_34mjw")
+region = Rect2(566, 0, 283, 503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_177hy"]
+atlas = ExtResource("2_34mjw")
+region = Rect2(283, 0, 283, 503)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qywtm"]
+atlas = ExtResource("2_34mjw")
+region = Rect2(0, 0, 283, 503)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trduo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xok3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_177hy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qywtm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Enemy_1" instance=ExtResource("1_l6v5n")]
-modulate = Color(1, 1, 1, 1)
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("2_bb8yr")
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_trduo")
+frame = 2
+frame_progress = 0.0153232
+speed = 50
 hp = 5
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(-7.35292, 52.9411)
+visible = false
+position = Vector2(-5.14696, 8.67656)

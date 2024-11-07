@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://chd8nebpfp2ny"]
 
-[ext_resource type="Texture2D" uid="uid://byucg4s3sigx6" path="res://assets/Square.png" id="1_butbd"]
+[ext_resource type="Texture2D" uid="uid://bme2jckh0gvkd" path="res://assets/ammo-rifle 32px.png" id="1_ayrpk"]
 [ext_resource type="Script" path="res://Power_up.gd" id="2_tty5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht3ln"]
@@ -44,10 +44,8 @@ _data = {
 }
 
 [node name="Power_up_reload" type="Sprite2D"]
-modulate = Color(0.2, 1, 0.0784314, 1)
-rotation = -0.785398
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("1_butbd")
+texture = ExtResource("1_ayrpk")
 script = ExtResource("2_tty5q")
 player_variable_modify = "reload_speed"
 player_variable_set = 0.05

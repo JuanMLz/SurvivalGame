@@ -1,15 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmi5y85g5ajas"]
+[gd_scene load_steps=9 format=3 uid="uid://bmi5y85g5ajas"]
 
-[ext_resource type="Texture2D" uid="uid://caico4dl5wwqa" path="res://assets/bullet1.png" id="1_bdpdu"]
+[ext_resource type="Texture2D" uid="uid://chqol6up47dmm" path="res://assets/bullet3.png" id="1_l47jl"]
 [ext_resource type="Script" path="res://Bullet.gd" id="2_8h5ng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u10gb"]
+atlas = ExtResource("1_l47jl")
+region = Rect2(0, 0, 18, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmumu"]
+atlas = ExtResource("1_l47jl")
+region = Rect2(36, 0, 18, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70vr6"]
+atlas = ExtResource("1_l47jl")
+region = Rect2(54, 0, 18, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msge0"]
+atlas = ExtResource("1_l47jl")
+region = Rect2(18, 0, 18, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ar1os"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u10gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmumu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70vr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msge0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynkid"]
 size = Vector2(16, 16)
 
-[node name="Bullet" type="Sprite2D"]
-rotation = -0.45204
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_bdpdu")
+[node name="Bullet" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ar1os")
+frame_progress = 0.110508
 script = ExtResource("2_8h5ng")
 
 [node name="HitBox" type="Area2D" parent="." groups=["Enemy_damager"]]
@@ -19,5 +54,6 @@ visible = false
 shape = SubResource("RectangleShape2D_ynkid")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
