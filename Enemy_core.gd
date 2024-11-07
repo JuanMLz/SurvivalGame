@@ -13,6 +13,7 @@ var stun = false
 
 var blood_particles = preload("res://Blood_particles.tscn")
 
+# Processa a vida e efeitos do inimigo
 func _process(_delta):
 	if hp <= 0:
 		if Global.camera != null:
@@ -25,7 +26,7 @@ func _process(_delta):
 			blood_particles_instance.modulate = Color.from_hsv(current_color.h, 0.75, current_color.v)
 		queue_free()
 
-
+# Movimenta o inimigo em direção ao jogador
 func basic_movement_towards_player(delta):
 	if Global.player != null and stun == false:
 		velocity = global_position.direction_to(Global.player.global_position)
@@ -34,6 +35,7 @@ func basic_movement_towards_player(delta):
 		velocity = lerp(velocity, Vector2(0, 0), 0.3)
 		global_position += velocity * delta
 
+# Aplica efeitos ao inimigo ao ser atingido
 func _on_hit_box_area_entered(area: Area2D):
 	if area.is_in_group("Enemy_damager") and stun == false:
 		modulate = Color.WHITE
@@ -43,7 +45,7 @@ func _on_hit_box_area_entered(area: Area2D):
 		$Stun_timer.start()
 		area.get_parent().queue_free()
 
-
+# Restaura o estado do inimigo após o efeito de stun
 func _on_stun_timer_timeout():
 	modulate = current_color
 	stun = false

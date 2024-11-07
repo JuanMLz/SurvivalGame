@@ -1,5 +1,6 @@
 extends Node
 
+# Variáveis globais
 var node_creation_parent = null
 var player = null
 var camera = null
@@ -7,6 +8,7 @@ var camera = null
 var points = 0
 var highscore = 0
 
+# Função global para instanciar nós em posições específicas
 func instance_node(node, location, parent):
 	var node_instance = node.instantiate()
 	parent.add_child(node_instance)
